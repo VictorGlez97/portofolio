@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#inicio {
+    text-align: center;
+    padding: 50px;
+}
+
+#portafolio {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+#servicios {
+    padding: 50px;
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicio {
+    width: 30%;
+    text-align: center;
+}
+
+.servicio img {
+    max-width: 100px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .redes-sociales a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
