@@ -15,9 +15,9 @@ const Contact = () => {
         <>
             <section id="contacto">
                 <h2 className="text-2xl text-center font-bold">Contacto</h2>
-                <div className='flex justify-content-center'>
+                <div className='flex justify-content-center pl-4 pr-4'>
 
-                    <Card className='col-6 p-fluid'>
+                    <Card className='col-12 md:col-6 md:col-6 p-fluid'>
                         
                         <div className="col-12 mb-4" style={{ marginTop: '-1rem' }}>
                             <label> Nombre </label>

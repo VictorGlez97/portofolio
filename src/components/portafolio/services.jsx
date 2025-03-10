@@ -8,8 +8,8 @@ const Services = () => {
            <section id="servicios">
                 <h2 className="text-2xl text-center title">Servicios que ofrezco</h2>
 
-                <div className="flex md:flex-nowrap sm:flex-wrap justify-content-center p-4 gap-2">
-                    <Card className="md:col-4 sm:col-12">
+                <div className="flex flex-wrap md:flex-nowrap lg:flex-nowrap justify-content-center p-4 gap-2">
+                    <Card className="col-12 md:col-4 lg:col-4">
                         {/* <img src="icono-web.png" alt="Desarrollo Web"> --> */}
                         <div className="flex justify-content-center">
                             <i className="pi pi-code" style={{ fontSize: '2.5rem' }} />
@@ -20,7 +20,7 @@ const Services = () => {
                         </div>
                     </Card>
                 
-                    <Card className="md:col-4 sm:col-12">
+                    <Card className="col-12 md:col-4 lg:col-4">
                         {/* <img src="icono-app.png" alt="Desarrollo de Aplicaciones"> --> */}
                         <div className="flex justify-content-center">
                             <i className="pi pi-desktop" style={{ fontSize: '2.5rem' }} />
@@ -31,7 +31,7 @@ const Services = () => {
                         </div>
                     </Card>
                 
-                    <Card className="md:col-4 sm:col-12">
+                    <Card className="col-12 md:col-4 lg:col-4">
                         {/* <img src="icono-soporte.png" alt="Mantenimiento y Soporte"> --> */}
                         <div className="flex justify-content-center">
                             <i className="pi pi-wrench" style={{ fontSize: '2.5rem' }} />
