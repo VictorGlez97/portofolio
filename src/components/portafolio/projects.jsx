@@ -1,26 +1,35 @@
+import { Card } from "primereact/card"
 
-function Projects() {
+const Projects = () => {
 
     return (
         <>
             <section id="portafolio">
-                <h2>Mis Proyectos</h2>
-                <div class="proyectos">
-                    <div class="proyecto">
+                <h2 className="text-2xl text-center font-bold">Mis Proyectos</h2>
+                <div className="flex md:flex-nowrap sm:flex-wrap justify-content-center p-4 gap-2">
+                    
+                    <Card className="md:col-4 sm:col-12">
                         {/* <img src="proyecto1.jpg" alt="Proyecto 1"> --> */}
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción breve del proyecto.</p>
-                    </div>
-                    <div class="proyecto">
-                        {/* <img src="proyecto2.jpg" alt="Proyecto 2"> --> */}
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción breve del proyecto.</p>
-                    </div>
-                    <div class="proyecto">
-                        {/* <img src="proyecto3.jpg" alt="Proyecto 3"> --> */}
-                        <h3>Proyecto 3</h3>
-                        <p>Descripción breve del proyecto.</p>
-                    </div>
+                        <div className="flex justify-content-center">
+                            <i className="pi pi-sparkles" style={{ fontSize: '2.5rem' }} />
+                        </div>
+                        <div className="flex flex-column justify-content-center">
+                            <h3 className="text-center"> Noemichi´s bakery </h3>
+                            <p className="text-center">Descripción breve del proyecto.</p>
+                        </div>
+                    </Card>
+                    
+                    <Card className="md:col-4 sm:col-12">
+                        {/* <img src="proyecto1.jpg" alt="Proyecto 1"> --> */}
+                        <div className="flex justify-content-center">
+                            <i className="pi pi-bitcoin" style={{ fontSize: '2.5rem' }} />
+                        </div>
+                        <div className="flex flex-column justify-content-center">
+                            <h3 className="text-center"> Trade schedule </h3>
+                            <p className="text-center">Descripción breve del proyecto.</p>
+                        </div>
+                    </Card>
+                    
                 </div>
             </section>
         </>

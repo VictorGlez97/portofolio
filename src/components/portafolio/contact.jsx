@@ -1,25 +1,56 @@
+import { useState } from 'react'
 
-function Contact() {
+import { Button } from 'primereact/button'
+import { Card } from 'primereact/card'
+import { InputText } from 'primereact/inputtext'
+import { InputTextarea } from 'primereact/inputtextarea'
+
+import { useForm } from '../../hooks/useForm'
+
+const Contact = () => {
+
+    const [ Values, handleInputChange, Reset ] = useForm({ name: '', message: '', mail: '' })
 
     return (
         <>
             <section id="contacto">
-                <h2> Contacto </h2>
-                <form action="/enviar" method="POST">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required />
+                <h2 className="text-2xl text-center font-bold">Contacto</h2>
+                <div className='flex justify-content-center'>
 
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required />
+                    <Card className='col-6 p-fluid'>
+                        
+                        <div className="col-12 mb-4" style={{ marginTop: '-1rem' }}>
+                            <label> Nombre </label>
+                            <InputText 
+                                value={Values.name} 
+                                onChange={(e) => handleInputChange(e.target.value, "name")} 
+                            />
+                        </div>
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
+                        <div className="col-12 mb-4" style={{ marginTop: '-1rem' }}>
+                            <label> Correo / telefono: </label>
+                            <InputText 
+                                value={Values.mail} 
+                                onChange={(e) => handleInputChange(e.target.value, "mail")} 
+                            />
+                        </div>
 
-                    <button type="submit">Enviar</button>
-                </form>
-                <div class="informacion">
-                    <p>Email: contacto@tucorreo.com</p>
-                    <p>Redes Sociales: [Enlace a redes sociales]</p>
+                        <div className="col-12" style={{ marginTop: '-1rem' }}>
+                            <label> Mensaje: </label>
+                            <InputTextarea 
+                                value={Values.message} 
+                                onChange={(e) => handleInputChange(e.target.value, "message")} 
+                            />
+                        </div>
+
+                        <div className='col-12'>
+                            <Button 
+                                label='Enviar'
+                                size='small'
+                                style={{ backgroundColor: 'var(--primary-color)' }}
+                            />
+                        </div>
+                    </Card>
                 </div>
             </section>
         </>

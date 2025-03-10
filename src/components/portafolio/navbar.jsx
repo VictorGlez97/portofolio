@@ -1,21 +1,27 @@
+import { useNavigate } from "react-router-dom"
 
-function Navbar() {
+import { Menubar } from 'primereact/menubar'
+
+const Navbar = ({ scroll }) => {
+
+    // const navigate = useNavigate();
+
+    const navList = [
+        { label: 'Portafolio', icon: 'pi pi-briefcase', command: () => { scroll('portafolio'); } },
+        { label: 'Servicios', icon: 'pi pi-desktop', command: () => { scroll('servicios'); } },
+        { label: 'Sobre mí', icon: 'pi pi-id-card', command: () => { scroll('sobre mi'); } },
+        { label: 'Contacto', icon: 'pi pi-envelope', command: () => { scroll('contacto'); } },
+    ]
 
     return (
         <>
             <header>
-                <div class="logo">
-                    {/* <img src="logo.png" alt="Logo de tu empresa o nombre"> */}
+                <div className="flex justify-content-center mt-4">
+                    <Menubar 
+                        className='w-11'
+                        model={navList}
+                    />
                 </div>
-                <nav>
-                    <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
             </header>
         </>
     )

@@ -5,11 +5,18 @@ import Navbar from "../components/portafolio/navbar"
 import Projects from "../components/portafolio/projects"
 import Services from "../components/portafolio/services"
 
-function Portofolio() {
+const Portofolio = () => {
+
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 
     return (
         <>
-            <Navbar />
+            <Navbar scroll={scrollToSection} />
             <Inicio />
             <Services />
             <Projects />
