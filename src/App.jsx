@@ -9,6 +9,8 @@ import 'primeflex/primeflex.css';
 
 import Portofolio from './pages/portofolio'
 
+import './App.css';
+
 function App() {
   return (
     <>

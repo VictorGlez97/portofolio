@@ -17,7 +17,7 @@ const Portofolio = () => {
     return (
         <>
             <Navbar scroll={scrollToSection} />
-            <Inicio />
+            <Inicio scroll={scrollToSection} />
             <Services />
             <Projects />
             <Contact />

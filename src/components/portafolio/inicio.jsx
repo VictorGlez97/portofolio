@@ -1,5 +1,6 @@
+import { Button } from "primereact/button"
 
-const Inicio = () => {
+const Inicio = ({ scroll }) => {
 
     return (
         <>
@@ -7,7 +8,10 @@ const Inicio = () => {
                 <div class="introduccion">
                     <h1 className="text-3xl">Hola, soy VHGA</h1>
                     <p className="text-xl">Desarrollador web y de aplicaciones de escritorio con experiencia creando soluciones personalizadas para negocios y emprendedores.</p>
-                    <a href="#contacto" class="cta">Solicita una consulta</a>
+                    <div className="flex justify-content-end">
+                        <Button label="Solicita una consulta" severity="info" onClick={ scroll('contacto') } text />
+                        {/* style={{ color: '#85b2f9' }} */}
+                    </div>
                 </div>
                 <div class="imagen">
                     {/* <img src="foto-perfil.jpg" alt="Tu nombre o imagen"> */}

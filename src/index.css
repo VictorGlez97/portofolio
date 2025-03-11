@@ -1,7 +1,12 @@
+body {
+  background-color: #204887;
+  color: #d0e1fd;
+}
+
 :root {
-  --primary-color: #ff5722; /* Color primario (Ejemplo: Naranja) */
-  --primary-color-text: #ffffff; /* Color del texto sobre primario */
-  
-  --secondary-color: #607d8b; /* Color secundario (Ejemplo: Gris azulado) */
-  --secondary-color-text: #ffffff; /* Color del texto sobre secundario */
+  --primary-color: #ff5722;
+  --primary-color-text: #326fd1;
+  --secondary-color: #607d8b;
+  --secondary-color-text: #326fd1;
+  --highlight-text-color: #f97316;
 }

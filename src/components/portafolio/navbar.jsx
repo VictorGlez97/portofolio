@@ -18,8 +18,10 @@ const Navbar = ({ scroll }) => {
             <header>
                 <div className="flex justify-content-center mt-4">
                     <Menubar 
-                        className='w-11'
+                        className='w-11 sticky'
                         model={navList}
+                        // style={{ backgroundColor: '#3b82f6' }}
+                        style={{ position: 'sticky' }}
                     />
                 </div>
             </header>

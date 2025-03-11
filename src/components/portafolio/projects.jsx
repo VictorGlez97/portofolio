@@ -22,7 +22,7 @@ const Projects = () => {
                     <Card className="col-12 md:col-4 lg:col-4">
                         {/* <img src="proyecto1.jpg" alt="Proyecto 1"> --> */}
                         <div className="flex justify-content-center">
-                            <i className="pi pi-bitcoin" style={{ fontSize: '2.5rem' }} />
+                            <i className="pi pi-bitcoin" style={{ fontSize: '2.5rem', color: 'var(--primary-color' }} />
                         </div>
                         <div>
                             <h3 className="text-center"> Trade schedule </h3>

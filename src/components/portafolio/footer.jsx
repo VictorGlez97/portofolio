@@ -5,10 +5,21 @@ const Footer = () => {
         <>
             <footer className="mt-4">
                 <p className="text-center">&copy; 2025 VHGA. Todos los derechos reservados.</p>
-                <div className="flex justify-content-center">
-                    <a href="https://facebook.com/tu-perfil" target="_blank">Facebook</a>
-                    <a href="https://twitter.com/tu-perfil" target="_blank">Twitter</a>
-                    <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
+                <div className="flex justify-content-center gap-4">
+                    <a className="flex flex-column" style={{ cursor: 'pointer' }}>
+                        <i className="pi pi-facebook text-center" style={{ fontSize: '1.5rem' }} />
+                        <span className="text-center"> vhga </span>
+                    </a>
+
+                    <a className="flex flex-column" style={{ cursor: 'pointer' }}>
+                        <i className="pi pi-instagram text-center" style={{ fontSize: '1.5rem' }} />
+                        <span className="text-center"> vhga </span>
+                    </a>
+
+                    <a className="flex flex-column" style={{ cursor: 'pointer' }}>
+                        <i className="pi pi-twitter text-center" style={{ fontSize: '1.5rem' }} />
+                        <span className="text-center"> vhga </span>
+                    </a>
                 </div>
             </footer>
         </>
