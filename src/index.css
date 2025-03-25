@@ -1,7 +1,7 @@
 body {
   /* background-color: #204887; */
   /* color: #d0e1fd; */
-  background-color: #000;
+  background-color: 	#003366;
   color: #007BFF;
 }
 
@@ -20,31 +20,49 @@ body {
 }
 
 label {
-  color: #fff;
+  color: #007BFF;
   font-weight: 400;
 }
 
 .customMenubar .p-menuitem-text {
-  color: #007BFF !important;
+  color: #FFF !important;
   font-weight: bold;
 }
 
+.customMenubar .p-menuitem-icon {
+  color: #FFF !important;
+}
+
+.customMenubar .p-menuitem-link:hover {
+  color: #0056B3 !important;
+}
+
 .customMenubar {
-  background-color: #333 !important;
+  background-color: #0056B3 !important;
   border: none;
 }
 
+.customMenubar .p-menuitem-link:hover {
+  background-color: #0056b3 !important; /* Azul más oscuro en hover */
+  color: #ffffff !important; /* Texto en blanco */
+}
+
+.custoMenubar .p-menuitem-link:focus {
+  background-color: #004099 !important; /* Azul más oscuro en focus */
+  color: #ffffff !important;
+}
+
 .customCard {
-  background-color: #333 !important;
+  background-color: #CCE5FF !important;
 }
 
 .customInput {
-  color: white; /* Color del texto */
-  background-color: #333; /* Color de fondo */
-  border: 1px solid #555; /* Borde opcional */
+  color: #007BFF;
+  background-color: #EAF4FF;
+  border: 1px solid #339CFF;
 }
 
 .customInput:focus {
-  background-color: #444; /* Color cuando está enfocado */
-  border-color: #777;
+  background-color: #EAF4FF;
+  border-color: #339CFF;
 }
