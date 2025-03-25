@@ -22,11 +22,11 @@ const Contact = () => {
         const response = await api.post('portofolio/contact', Values);
 
         if ( response.data.error ) {
-            toast.current.show({severity: 'warn', summary: 'Advertencia', detail: response.data.msg, life: 3000});
+            toast.current.show({severity: 'Warn', summary: 'Advertencia', detail: response.data.msg, life: 3000});
             return;
         }
 
-        toast.current.show({severity: 'success', summary: 'Éxito', detail: response.data.msg, life: 3000});
+        toast.current.show({severity: 'Info', summary: 'Info', detail: response.data.msg, life: 3000});
     }
 
     return (
@@ -36,37 +36,41 @@ const Contact = () => {
                 <h2 className="text-2xl text-center font-bold">Contacto</h2>
                 <div className='flex justify-content-center pl-4 pr-4'>
 
-                    <Card className='col-12 md:col-6 md:col-6 p-fluid'>
+                    <Card className='col-12 md:col-6 md:col-6 p-fluid customCard'>
                         
                         <div className="col-12 mb-4" style={{ marginTop: '-1rem' }}>
                             <label> Nombre </label>
                             <InputText 
                                 value={Values.name} 
-                                onChange={(e) => handleInputChange(e.target.value, "name")} 
+                                onChange={(e) => handleInputChange(e.target.value, "name")}
+                                className='customInput' 
                             />
                         </div>
 
                         <div className="col-12 mb-4" style={{ marginTop: '-1rem' }}>
-                            <label> Correo / telefono: </label>
+                            <label> Correo </label>
                             <InputText 
                                 value={Values.mail} 
                                 onChange={(e) => handleInputChange(e.target.value, "mail")} 
+                                className='customInput'
                             />
                         </div>
 
                         <div className="col-12 mb-4" style={{ marginTop: '-1rem' }}>
-                            <label> Telefono: </label>
+                            <label> Teléfono </label>
                             <InputText 
                                 value={Values.phone} 
                                 onChange={(e) => handleInputChange(e.target.value, "phone")} 
+                                className='customInput'
                             />
                         </div>
 
                         <div className="col-12" style={{ marginTop: '-1rem' }}>
-                            <label> Mensaje: </label>
+                            <label> Mensaje </label>
                             <InputTextarea 
                                 value={Values.message} 
                                 onChange={(e) => handleInputChange(e.target.value, "message")} 
+                                className='customInput'
                             />
                         </div>
 
@@ -74,8 +78,9 @@ const Contact = () => {
                             <Button 
                                 label='Enviar'
                                 size='small'
-                                style={{ backgroundColor: 'var(--primary-color)' }}
+                                // style={{ backgroundColor: 'var(--primary-color)' }}
                                 onClick={ handleSubmit }
+                                severity='info'
                             />
                         </div>
                     </Card>

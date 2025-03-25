@@ -7,7 +7,7 @@ const Navbar = ({ scroll }) => {
     // const navigate = useNavigate();
 
     const navList = [
-        { label: 'Portafolio', icon: 'pi pi-briefcase', command: () => { scroll('portafolio'); } },
+        { label: 'Portafolio', className: 'colorAzul', icon: 'pi pi-briefcase', command: () => { scroll('portafolio'); } },
         { label: 'Servicios', icon: 'pi pi-desktop', command: () => { scroll('servicios'); } },
         { label: 'Sobre mí', icon: 'pi pi-id-card', command: () => { scroll('sobre mi'); } },
         { label: 'Contacto', icon: 'pi pi-envelope', command: () => { scroll('contacto'); } },
@@ -18,7 +18,7 @@ const Navbar = ({ scroll }) => {
             <header>
                 <div className="flex justify-content-center mt-4">
                     <Menubar 
-                        className='w-11 sticky'
+                        className='w-11 sticky customMenubar'
                         model={navList}
                         // style={{ backgroundColor: '#3b82f6' }}
                         style={{ position: 'sticky' }}
